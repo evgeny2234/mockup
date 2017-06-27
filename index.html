@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//RU" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <script>    // Скрипт проверяет наличие подключенной библиотеки jQuery и если она подключена - не повторяет подключение.
+                // Если же библиотека не была подключена - подключаем ее, а затеми Наш скрипт.
+    if(typeof ($) == "function") {
+
+    function createScript(src) {
+            var script = document.createElement('script');
+            document.head.appendChild(script);
+            script.src = '' + src;
+    }
+        createScript("./js.js");
+    }
+    else {
+        function createScript(src) {
+                var script = document.createElement('script');
+                document.head.appendChild(script);
+                script.src = '' + src;
+        }
+        createScript("//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js");
+        createScript("./js.js");
+    }
+  </script>
+ </head>
+ <body>
+
+ </body>
+</html>
