@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
 //подключаем бутстрап
 var bootstrapCss = $('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">');
 var bootstrapTheme = $('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">');
@@ -115,7 +114,7 @@ var bootstrapJs = $('head').append('<script src="https://maxcdn.bootstrapcdn.com
 
     function build(constructor, cssValues) {  //функция строит попап-окно и задает ему стили
 
-        var fields = $.getJSON( "https://dev.nexusmedia-ua.com/devtest/", function (data) {
+        var fields = $.getJSON( "http://dev.nexusmedia-ua.com/devtest/", function (data) {
             
             var JSONdata = new Object();  //парсим JSON из которого будем брать все данные. (из него же можем брать стили и ID)
             JSONdata.imageUrl = data.messages[0].image;
